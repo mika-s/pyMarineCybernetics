@@ -9,16 +9,7 @@ class CoefficientType(Enum):
 
     blendermann = 1
     hughes = 2
-
-
-class DirectionType(Enum):
-    """The direction of the current, wind, etc. can either
-    be going to or coming from.
-
-    """
-
-    going_to = 1
-    coming_from = 2
+    isherwood = 3
 
 
 class DOF(IntEnum):

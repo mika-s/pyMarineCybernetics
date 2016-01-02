@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module waves</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>waves</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmika%5Cdocuments%5Cgithub%5Cpymarinecybernetics%5Cutil%5Cwaves.py">c:\users\mika\documents\github\pymarinecybernetics\util\waves.py</a></font></td></tr></table>
+    <p><tt>Functions&nbsp;related&nbsp;to&nbsp;waves.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-exp"><strong>exp</strong></a>(...)</dt><dd><tt><a href="#-exp">exp</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;e&nbsp;raised&nbsp;to&nbsp;the&nbsp;power&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-jonswap"><strong>jonswap</strong></a>(U_10, fetch_dependent=False, fetch=None, alpha=0.0081, beta=1.25, gamma=3.3, omega_p=0.5, step_size=0.01)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;representing&nbsp;the&nbsp;entire&nbsp;JONSWAP&nbsp;wave&nbsp;spectrum,<br>
+for&nbsp;a&nbsp;given&nbsp;alpha,&nbsp;beta,&nbsp;gamma,&nbsp;omega_p,&nbsp;fetch&nbsp;length&nbsp;and&nbsp;U_10.<br>
+&nbsp;<br>
+omega_p&nbsp;and&nbsp;alpha&nbsp;can&nbsp;be&nbsp;calculated&nbsp;from&nbsp;the&nbsp;fetch&nbsp;length.&nbsp;Experience<br>
+values&nbsp;can&nbsp;also&nbsp;be&nbsp;used.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;U_10&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wind&nbsp;velocity&nbsp;at&nbsp;10&nbsp;m&nbsp;above&nbsp;sea&nbsp;level<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fetch_dependent&nbsp;(bool)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;determines&nbsp;if&nbsp;alpha&nbsp;and&nbsp;omega_p&nbsp;should<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be&nbsp;calculated&nbsp;from&nbsp;fetch&nbsp;length<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fetch&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wave&nbsp;spectrum&nbsp;parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alpha&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wave&nbsp;spectrum&nbsp;parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;beta&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wave&nbsp;spectrum&nbsp;parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gamma&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wave&nbsp;spectrum&nbsp;parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;omega_p&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wave&nbsp;spectrum&nbsp;parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;step_size&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;determines&nbsp;the&nbsp;resolution&nbsp;of&nbsp;the&nbsp;spectrum<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;omegas&nbsp;(list&nbsp;of&nbsp;floats)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;circular&nbsp;frequencies<br>
+&nbsp;&nbsp;&nbsp;&nbsp;spectrum&nbsp;(list&nbsp;of&nbsp;floats)&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;entire&nbsp;JONSWAP&nbsp;wave&nbsp;spectrum</tt></dd></dl>
+ <dl><dt><a name="-pierson_moskowitz"><strong>pierson_moskowitz</strong></a>(U_10, calc_alpha=False, alpha=0.0081, H_s=0.0, T_0=0.0, calc_beta=False, beta=0.74, step_size=0.01)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;representing&nbsp;the&nbsp;entire&nbsp;Pierson-Moskowitz&nbsp;wave&nbsp;spectrum,<br>
+for&nbsp;a&nbsp;given&nbsp;alpha,&nbsp;beta&nbsp;and&nbsp;U_10.<br>
+&nbsp;<br>
+alpha&nbsp;and&nbsp;beta&nbsp;can&nbsp;be&nbsp;calculated&nbsp;from&nbsp;H_s&nbsp;and&nbsp;T_0.&nbsp;Experience&nbsp;values&nbsp;can&nbsp;also<br>
+be&nbsp;used.<br>
+&nbsp;<br>
+Assumes&nbsp;a&nbsp;fully&nbsp;developed&nbsp;sea,&nbsp;i.e.&nbsp;fetch&nbsp;length&nbsp;and&nbsp;duration&nbsp;are&nbsp;infinite.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;U_10&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wind&nbsp;velocity&nbsp;at&nbsp;10&nbsp;m&nbsp;above&nbsp;sea&nbsp;level<br>
+&nbsp;&nbsp;&nbsp;&nbsp;calc_alpha&nbsp;(bool)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;whether&nbsp;to&nbsp;calculate&nbsp;alpha&nbsp;or&nbsp;not<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alpha&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wave&nbsp;spectrum&nbsp;parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;H_s&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;signficant&nbsp;wave&nbsp;height&nbsp;(for&nbsp;calculating<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alpha)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;T_0&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;zero-cross&nbsp;wave&nbsp;period&nbsp;(for&nbsp;calculating<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alpha&nbsp;and&nbsp;beta)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;calc_beta&nbsp;(bool)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;whether&nbsp;to&nbsp;calculate&nbsp;beta&nbsp;or&nbsp;not<br>
+&nbsp;&nbsp;&nbsp;&nbsp;beta&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;wave&nbsp;spectrum&nbsp;parameter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;step_size&nbsp;(float)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;determines&nbsp;the&nbsp;resolution&nbsp;of&nbsp;the&nbsp;spectrum<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;omegas&nbsp;(list&nbsp;of&nbsp;floats)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;circular&nbsp;frequencies<br>
+&nbsp;&nbsp;&nbsp;&nbsp;spectrum&nbsp;(list&nbsp;of&nbsp;floats)&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;entire&nbsp;PM&nbsp;wave&nbsp;spectrum</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>pi</strong> = 3.141592653589793</td></tr></table>
+</body></html>
