@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Functions related to filtering."""
-
-import numpy as np
+"""Functions related to lowpass filtering."""
 
 
 def lowpass_filter(input_series, time_constant):

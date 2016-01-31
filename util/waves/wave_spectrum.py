@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-"""Functions related to waves."""
+"""Functions related to wave spectrum."""
 
 from math import exp, pi
 import numpy as np
 
 
-def pierson_moskowitz(U_10, calc_alpha = False, alpha = 0.0081, H_s = 0.0, T_0 = 0.0,
-                      calc_beta = False, beta = 0.74, step_size = 0.01):
+def pierson_moskowitz(U_10, calc_alpha=False, alpha=0.0081, H_s=0.0, T_0=0.0,
+                      calc_beta=False, beta=0.74, step_size=0.01):
     """Returns a list representing the entire Pierson-Moskowitz wave spectrum,
     for a given alpha, beta and U_10.
 
@@ -52,8 +52,8 @@ def pierson_moskowitz(U_10, calc_alpha = False, alpha = 0.0081, H_s = 0.0, T_0 =
     return omegas, spectrum
 
 
-def jonswap(U_10, fetch_dependent = False, fetch = None, alpha = 0.0081,
-            beta = 1.25, gamma = 3.3, omega_p = 0.5, step_size = 0.01):
+def jonswap(U_10, fetch_dependent=False, fetch=None, alpha=0.0081,
+            beta=1.25, gamma=3.3, omega_p=0.5, step_size=0.01):
     """Returns a list representing the entire JONSWAP wave spectrum,
     for a given alpha, beta, gamma, omega_p, fetch length and U_10.
 
@@ -78,7 +78,7 @@ def jonswap(U_10, fetch_dependent = False, fetch = None, alpha = 0.0081,
 
     grav = 9.81
 
-    if (fetch_dependent == True):
+    if fetch_dependent == True:
         omega_p = (2 * pi * 16.04) / (fetch * U_10)**0.38
         alpha = 0.076 * ((fetch * grav) / U_10**2)**-0.22
 
