@@ -13,7 +13,6 @@
 
 ## Thruster
 
-* ABS calculation of max thruster forces
 * DNV calculation of max thruster forces
 
 ## Current
