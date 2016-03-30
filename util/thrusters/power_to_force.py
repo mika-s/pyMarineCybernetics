@@ -9,6 +9,8 @@ def imca_p2f(thruster_type, max_power_positive, max_power_negative):
     """Return the maximum force a thruster can apply, in kN, given the maximum power it can deliver,
     according to the IMCA power-to-force relationship (see IMCA M 140).
 
+    Includes thruster losses.
+
     Args:
         - thruster_type (ThrusterType enum)  -- type of thruster
         - max_power_positive (float)         -- maximum power, positive direction, in kW
@@ -44,21 +46,27 @@ def imca_p2f(thruster_type, max_power_positive, max_power_negative):
     return max_force_positive, max_force_negative
 
 
-def abs_p2f(max_power_positive, max_power_negative, diameter):
+def abs_p2f(max_power_positive, max_power_negative, diameter, ducted):
     """Return the maximum force a thruster can apply, in kN, given the maximum power it can deliver,
     according to the ABS power-to-force relationship (see ABS Guide For Dynamic Positioning Systems).
+
+    Excludes thruster losses.
 
     Args:
         - max_power_positive (float)         -- maximum power, positive direction, in kW
         - max_power_negative (float)         -- maximum power, negative direction, in kW
         - diameter (float)                   -- diameter of the thruster, in m
+        - ducted (bool)                      -- true if the thruster is ducted
 
     Returns:
         - max_force_positive (float)        -- maximum force, positive direction, in kN
         - max_force_negative (float)        -- maximum force, negative direction, in kN
     """
 
-    K = 848.0
+    if ducted == False:
+        K = 848.0
+    else:
+        K = 1250.0
 
     max_force_positive = (K * (max_power_positive * diameter)**(2.0/3.0)) / 1000.0
     max_force_negative = (K * (max_power_negative * diameter)**(2.0/3.0)) / 1000.0
