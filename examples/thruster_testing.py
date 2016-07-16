@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Functions related to power to force conversion."""
 
-from pyMarineCybernetics.util.thrusters import power_to_force as p2f
-from pyMarineCybernetics.util.thrusters import thruster_thruster_interaction as tti
-from pyMarineCybernetics.util.enumerations import ThrusterType
+from pymarcyb.util.thrusters import power_to_force as p2f
+from pymarcyb.util.thrusters import thruster_thruster_interaction as tti
+from pymarcyb.util.enumerations import ThrusterType
 
 
 def main():

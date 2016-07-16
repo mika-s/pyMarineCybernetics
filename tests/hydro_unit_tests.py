@@ -2,14 +2,14 @@
 """Unit tests for the hydro functions."""
 
 import unittest
-from pyMarineCybernetics.util.hydro import coeffs as c
+from pymarcyb.util.hydro import coeffs as c
 
 
 class TestHydroMethods(unittest.TestCase):
     """Unit test class for the hydro methods."""
 
     def setUp(self):
-        """Seting up for the test."""
+        """Setting up for the test."""
 
 
     def test_cb_extrapolation_upwards(self):

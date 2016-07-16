@@ -2,15 +2,15 @@
 """Unit tests for the thruster functions."""
 
 import unittest
-from pyMarineCybernetics.util.thrusters import power_to_force as p2f
-from pyMarineCybernetics.util.enumerations import ThrusterType
+from pymarcyb.util.thrusters import power_to_force as p2f
+from pymarcyb.util.enumerations import ThrusterType
 
 
 class TestThrusterMethods(unittest.TestCase):
     """Unit test class for the thruster methods."""
 
     def setUp(self):
-        """Seting up for the test."""
+        """Setting up for the test."""
 
         self.max_force_tunnel_imca, self.min_force_tunnel_imca = \
             p2f.imca_p2f(ThrusterType.tunnel, 880.0, 880.0)

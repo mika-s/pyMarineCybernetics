@@ -2,9 +2,9 @@
 """Functions related to plotting of wind forces and wind coefficients."""
 
 from math import fabs, pi, radians, degrees
-from pyMarineCybernetics.util.enumerations import DOF
-from pyMarineCybernetics.util.wind import wind_forces as wf
-from pyMarineCybernetics.util.wind import wind_coefficients as wc
+from pymarcyb.util.enumerations import DOF
+from pymarcyb.util.wind import wind_forces as wf
+from pymarcyb.util.wind import wind_coefficients as wc
 import numpy as np
 import matplotlib.pyplot as plt
 

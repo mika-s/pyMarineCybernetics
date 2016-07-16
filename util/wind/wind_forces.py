@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Functions related to wind forces."""
 
-from pyMarineCybernetics.util.enumerations import CoefficientType
-from pyMarineCybernetics.util.wind import wind_coefficients as wc
+from pymarcyb.util.enumerations import CoefficientType
+from pymarcyb.util.wind import wind_coefficients as wc
 from math import pi
 import numpy as np
 
@@ -65,7 +65,7 @@ def wind_forces_and_moment(wind_speed, wind_direction, frontal_area, lateral_are
 
     q = 0.5 * rho_w * relative_wind_speed**2
     wind_force_surge = 10**-3 * q * C_X * frontal_area
-    wind_force_sway  = 10**-3 * q * C_Y * lateral_area
+    wind_force_sway  = 10**-3 * q * C_Y * lateral_area 
     wind_moment_yaw  = 10**-3 * q * C_N * lateral_area * Loa
 
     wind_forces_and_moment = np.matrix([[wind_force_surge],

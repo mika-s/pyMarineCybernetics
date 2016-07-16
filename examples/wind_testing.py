@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Functions for testing the other wind related functions."""
 
-from pyMarineCybernetics.util.wind import wind_plot as wp
-from pyMarineCybernetics.util.enumerations import CoefficientType
+from pymarcyb.util.wind import wind_plot as wp
+from pymarcyb.util.enumerations import CoefficientType
 from math import radians
 import numpy as np
 

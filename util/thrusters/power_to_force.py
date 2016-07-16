@@ -2,7 +2,7 @@
 """Functions related to power to force conversion."""
 
 from sys import exit
-from pyMarineCybernetics.util.enumerations import ThrusterType
+from pymarcyb.util.enumerations import ThrusterType
 
 
 def imca_p2f(thruster_type, max_power_positive, max_power_negative):

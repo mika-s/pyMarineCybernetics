@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Functions related to hydrodynamics."""
 
-from pyMarineCybernetics.util.hydro import coeffs as c
+from pymarcyb.util.hydro import coeffs as c
 
 
 def main():
