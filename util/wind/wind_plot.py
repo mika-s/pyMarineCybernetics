@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-"""Functions related to plotting of wind forces and wind coefficients."""
+"""Functions related to plotting of wind forces, coefficients and spectras."""
 
 from math import fabs, pi, radians, degrees
 from pymarcyb.util.enumerations import DOF
 from pymarcyb.util.wind import wind_forces as wf
 from pymarcyb.util.wind import wind_coefficients as wc
+from pymarcyb.util.wind import wind_spectrum as ws
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -232,4 +233,85 @@ def plot_isherwood(frontal_area, lateral_area, superstructure_area, Loa, breadth
         plt.title("Isherwood wind coefficients")
 
     plt.ylim([-1.0, 1.0])
+    plt.show()
+
+
+def plot_davenport(U_10, kappa=0.0025, L=1200, step_size=0.001):
+    """Plot the Davenport wind spectrum.
+
+    Args:
+        U_10 (float)        -- mean wind speed at 10 m altitude [m/s]
+        step_size (float)   -- determines the resolution of the spectrum
+
+    Returns:
+        N/A
+    """
+
+    frequencies, spectrum = ws.davenport(U_10, kappa=kappa, L=L, step_size=step_size)
+    plt.plot(frequencies, spectrum)
+    plt.show()
+
+
+def plot_harris(U_10, kappa=0.0025, L=1800, step_size=0.001):
+    """Plot the Harris wind spectrum.
+
+    Args:
+        U_10 (float)        -- mean wind speed at 10 m altitude [m/s]
+        kappa (float)       -- surface drag coefficient [-]
+        L (float)           -- scale length [m]
+        step_size (float)   -- determines the resolution of the spectrum
+
+    Returns:
+        N/A
+    """
+
+    frequencies, spectrum = ws.harris(U_10, kappa=kappa, L=L, step_size=step_size)
+    plt.plot(frequencies, spectrum)
+    plt.show()
+    
+def plot_ochi_shin(U_10, C_10=0.025, step_size=0.001):
+    """Plot the Harris wind spectrum.
+
+    Args:
+        U_10 (float)        -- mean wind speed at 10 m altitude [m/s]
+        step_size (float)   -- determines the resolution of the spectrum
+
+    Returns:
+        N/A
+    """
+
+    frequencies, spectrum = ws.ochi_shin(U_10, C_10=C_10, step_size=step_size)
+    plt.plot(frequencies, spectrum)
+    plt.show()    
+
+
+def plot_npd(U_10, step_size=0.001):
+    """Plot the NPD wind spectrum.
+
+    Args:
+        U_10 (float)        -- mean wind speed at 10 m altitude [m/s]
+        step_size (float)   -- determines the resolution of the spectrum
+
+    Returns:
+        N/A
+    """
+
+    frequencies, spectrum = ws.npd(U_10, step_size=step_size)
+    plt.plot(frequencies, spectrum)
+    plt.show()
+
+
+def plot_api(U_10, C=0.025, step_size=0.001):
+    """Plot the API wind spectrum.
+
+    Args:
+        U_10 (float)        -- mean wind speed at 10 m altitude [m/s]
+        step_size (float)   -- determines the resolution of the spectrum
+
+    Returns:
+        N/A
+    """
+
+    frequencies, spectrum = ws.api(U_10, C=C, step_size=step_size)
+    plt.plot(frequencies, spectrum)
     plt.show()

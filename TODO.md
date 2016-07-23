@@ -21,7 +21,7 @@
 
 ## Waves
 
-* More wave spectras
+* More wave spectras (e.g. Ochi-Hubble)
 * Calculation of wave load, first and second order
 
 ## Wind
