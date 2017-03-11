@@ -28,3 +28,13 @@ class ThrusterType(Enum):
     propeller = 3
     waterjet = 4
     vsp = 5     # Voith Schneider Propeller
+
+
+class WindSpectrumType(Enum):
+    """Type of wind spectrum."""
+
+    davenport = 1
+    harris = 2
+    ochi_shin = 3
+    npd = 4
+    api = 5

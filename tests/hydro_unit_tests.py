@@ -11,14 +11,17 @@ class TestHydroMethods(unittest.TestCase):
     def setUp(self):
         """Setting up for the test."""
 
-
     def test_cb_extrapolation_upwards(self):
-        """Unit test for block coefficient extrapolation, extrapolating upwards"""
+        """Unit test for block coefficient extrapolation, extrapolating
+        upwards.
+        """
 
         self.assertAlmostEqual(c.cb_extrapolation(0.75, 7.3, 10.0), 0.775, 3)
 
     def test_cb_extrapolation_downwards(self):
-        """Unit test for block coefficient extrapolation, extrapolating upwards"""
+        """Unit test for block coefficient extrapolation, extrapolating
+        upwards.
+        """
 
         self.assertAlmostEqual(c.cb_extrapolation(0.80, 10.0, 7.3), 0.778, 3)
 

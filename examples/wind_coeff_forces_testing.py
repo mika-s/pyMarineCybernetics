@@ -4,7 +4,6 @@
 from pymarcyb.util.wind import wind_plot as wp
 from pymarcyb.util.enumerations import CoefficientType
 from math import radians
-import numpy as np
 
 
 def main():

@@ -23,7 +23,7 @@ def lowpass_filter(input_series, time_constant):
         A = 1.0 - B
 
         new_filtered_value = (A * previous_filtered_value
-            + B * current_unfiltered_value)
+                              + B * current_unfiltered_value)
 
         output_series.append(new_filtered_value)
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Functions related to plotting of wind forces, coefficients and spectras."""
 
-from math import fabs, pi, radians, degrees
+from math import radians
 from pymarcyb.util.enumerations import DOF
 from pymarcyb.util.wind import wind_forces as wf
 from pymarcyb.util.wind import wind_coefficients as wc
