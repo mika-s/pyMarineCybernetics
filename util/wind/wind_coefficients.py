@@ -14,7 +14,8 @@ def blendermann(vessel_type, frontal_area, lateral_area, Loa, s_L, angle_of_atta
         frontal_area (float)          -- frontal area of the vessel in m^2
         lateral_area (float)          -- lateral area of the vessel in m^2
         Loa (float)                   -- length over all in m
-        s_L (float)                   -- centroid of the wind area in the lateral direction, ahead of Lpp/2, in m
+        s_L (float)                   -- centroid of the wind area in the lateral
+                                         direction, ahead of Lpp/2, in m
         angle_of_attack (float)       -- wind angle of attack relative to the bow in radians
 
     Returns:
@@ -30,7 +31,7 @@ def blendermann(vessel_type, frontal_area, lateral_area, Loa, s_L, angle_of_atta
         [['Car carrier',                    0.95,   0.55,   0.60,   0.80,   1.2], \
         ['Cargo vessel, loaded',            0.85,   0.65,   0.55,   0.40,   1.7], \
         ['Cargo vessel, container on deck', 0.85,   0.55,   0.50,   0.40,   1.4], \
-        ['Container ship, loaded',          0.90,   0.55,   0.55,   0.40,   1,4], \
+        ['Container ship, loaded',          0.90,   0.55,   0.55,   0.40,   1.4], \
         ['Destroyer',                       0.85,   0.60,   0.65,   0.65,   1.1], \
         ['Diving support vessel',           0.90,   0.60,   0.80,   0.55,   1.7], \
         ['Drilling vessel',                 1.00,   0.85,   0.92,   0.10,   1.7], \
@@ -81,7 +82,8 @@ def isherwood(frontal_area, lateral_area, superstructure_area, Loa, breadth, S, 
         Loa (float)                 -- length over all in m
         breadth (float)             -- breadth in m
         S (float)                   -- length of the lateral projection
-        s_L (float)                 -- centroid of the wind area in the lateral direction, ahead of Lpp/2, in m
+        s_L (float)                 -- centroid of the wind area in the lateral
+                                       direction, ahead of Lpp/2, in m
         masts (int)                 -- number of distinct groups of masts or king posts
         angle_of_attack (float)     -- wind angle of attack relative to the bow in radians
 

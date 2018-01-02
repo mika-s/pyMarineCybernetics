@@ -36,10 +36,10 @@ def pierson_moskowitz(U_10, calc_alpha=False, alpha=0.0081, H_s=0.0, T_0=0.0,
     U_195 = 1.026 * U_10     # Assumes a drag coefficient of 1.3 * 10^(-3).
     omega_0 = grav / U_195
 
-    if calc_alpha == True:
+    if calc_alpha:
         alpha = 4 * pi**3 * (H_s / (grav * T_0**2))**2
 
-    if calc_beta == True:
+    if calc_beta:
         beta = 16 * pi**3 * (U_195 / (grav * T_0))**4
 
     spectrum = []
@@ -78,7 +78,7 @@ def jonswap(U_10, fetch_dependent=False, fetch=None, alpha=0.0081,
 
     grav = 9.81
 
-    if fetch_dependent == True:
+    if fetch_dependent:
         omega_p = (2 * pi * 16.04) / (fetch * U_10)**0.38
         alpha = 0.076 * ((fetch * grav) / U_10**2)**-0.22
 

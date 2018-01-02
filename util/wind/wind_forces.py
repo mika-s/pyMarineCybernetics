@@ -50,13 +50,13 @@ def wind_forces_and_moment(wind_speed, wind_direction, frontal_area, lateral_are
 
     # Calculate coefficients depending on coefficient calculation method
     if coeffs is CoefficientType.blendermann:
-        if vessel_type == None:
+        if vessel_type is None:
             print("Please enter the correct parameters for Blendermann.\n")
             C_X, C_Y, C_N = 0, 0, 0
         else:
             C_X, C_Y, C_N = wc.blendermann(vessel_type, frontal_area, lateral_area, Loa, s_L, angle_of_attack)
     elif coeffs is CoefficientType.isherwood:
-        if superstructure_area == None or breadth == None or S == None or masts == None:
+        if superstructure_area is None or breadth is None or S is None or masts is None:
             print("Please enter the correct parameters for Isherwood.\n")
             C_X, C_Y, C_N = 0, 0, 0
         else:
